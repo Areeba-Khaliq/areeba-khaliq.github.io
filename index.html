@@ -3,94 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Areeba Khaliq — Portfolio</title>
+<title>Areeba Khaliq</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="nav-name">Areeba Khaliq</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="page">
 
-  <section class="hero" id="about">
-    <div class="hero-photo">AK</div>
-    <div class="hero-text">
-      <h1>Areeba Khaliq</h1>
-      <p class="tagline">Computer Science Student &middot; Machine Learning &amp; Research Enthusiast</p>
+    <header class="masthead">
+      <img src="profile.jpg" alt="Areeba Khaliq" class="portrait" onerror="this.style.display='none'">
+      <div class="masthead-text">
+        <h1>Areeba Khaliq</h1>
+        <p class="affiliation">Department of Computer Science<br>University of the Punjab, Lahore</p>
+        <p class="links">
+          <a href="mailto:areebakhaliq02@gmail.com">Email</a> &nbsp;/&nbsp;
+          <a href="https://github.com/areeba-khaliq" target="_blank" rel="noopener">GitHub</a> &nbsp;/&nbsp;
+          <a href="#" target="https://linkedin.com/in/areeba-khaliq" rel="noopener">LinkedIn</a> &nbsp;/&nbsp;
+          <a href="#" target="_blank" rel="noopener">CV</a>
+        </p>
+      </div>
+    </header>
 
-      <div class="hero-links">
-        <a href="mailto:areebakhaliq02@gmail.com">Email</a>
-        <a href="https://github.com/areeba-khaliq" target="_blank" rel="noopener">GitHub</a>
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+    <hr>
+
+
+    <hr>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="entry">
+        <h3>Federated Training and Per-Branch Explainability for Hybrid CNN-Transformer Skin Lesion Classification</h3>
+        <p class="entry-meta">Independent research project &middot; 2026</p>
+        <p>
+          Benchmarked four CNN-Transformer architectures for seven-class skin lesion diagnosis on HAM10000,
+          comparing centralized training against federated training across simulated hospitals. Reduced the
+          accuracy gap of federated training through normalization and initialization changes, and built a
+          Grad-CAM++ and attention-rollout pipeline to explain model behaviour across branches.
+        </p>
       </div>
 
-      <p class="hero-about">
-        I'm a final-year Computer Science student at the University of the Punjab, Lahore, with a strong
-        interest in machine learning, computer vision, and applied research. My work spans federated learning
-        for medical image classification to full-stack ML products, and I enjoy building systems end-to-end —
-        from model training to deployment.
-      </p>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <section class="section" id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-
-      <div class="grid-card">
-        <span class="tag">Machine Learning</span>
-        <h4>AcneAI</h4>
-        <p>Acne detection and analysis using a three-model EfficientNet-B3 pipeline, served via FastAPI with an OCR + LLM ingredient-scanning chatbot.</p>
-        <span class="card-date">Final Year Project · 2025–2026</span>
+      <div class="entry">
+        <h3>AcneAI: Acne Detection and Analysis</h3>
+        <p class="entry-meta">Final year project &middot; 2025&ndash;2026</p>
+        <p>
+          A three-model EfficientNet-B3 pipeline for detection, sub-type, and severity classification, served
+          through FastAPI with sub-second CPU inference. Includes an asynchronous processing layer built on
+          Celery and Redis, and an OCR/LLM pipeline for ingredient scanning and dermatology guidance.
+        </p>
       </div>
 
-      <div class="grid-card">
-        <span class="tag">Research</span>
-        <h4>Federated Skin Lesion Classification</h4>
-        <p>Benchmarked CNN-Transformer architectures for skin lesion diagnosis across simulated hospitals using federated learning, with Grad-CAM++ explainability.</p>
-        <span class="card-date">2026</span>
+      <div class="entry">
+        <h3>Heart Disease Prediction</h3>
+        <p class="entry-meta">2025</p>
+        <p>
+          Comparative benchmark of four classical machine learning algorithms on the UCI Heart Disease dataset,
+          reaching 98.5% prediction accuracy.
+        </p>
       </div>
 
-      <div class="grid-card">
-        <span class="tag">Hackathon</span>
-        <h4>ResuMate</h4>
-        <p>AI-powered resume builder built with Next.js and Grok AI, deployed on Vercel.</p>
-        <span class="card-date">2025</span>
+      <div class="entry">
+        <h3>ResuMate &amp; AgentForce</h3>
+        <p class="entry-meta">Hackathon projects &middot; 2025</p>
+        <p>
+          ResuMate is an AI-assisted resume builder built with Next.js and Grok AI. AgentForce is an IT support
+          assistant integrating Salesforce Agentforce with a FastAPI backend.
+        </p>
       </div>
 
-      <div class="grid-card">
-        <span class="tag">Hackathon</span>
-        <h4>AgentForce</h4>
-        <p>IT support assistant integrating Salesforce Agentforce with a FastAPI backend, deployed on Render.</p>
-        <span class="card-date">2025</span>
-      </div>
+    </section>
 
-      <div class="grid-card">
-        <span class="tag">Machine Learning</span>
-        <h4>Heart Disease Prediction</h4>
-        <p>Benchmarked four ML algorithms on the UCI Heart Disease dataset, reaching 98.54% prediction accuracy.</p>
-        <span class="card-date">2025</span>
-      </div>
+    <hr>
 
-    </div>
-  </section>
+    <footer>
+      <p>areebakhaliq02@gmail.com</p>
+    </footer>
 
-  <footer id="contact">
-    <h2>Get in Touch</h2>
-    <div class="contact-links">
-      <a href="mailto:areebakhaliq02@gmail.com">areebakhaliq02@gmail.com</a>
-      <a href="https://github.com/areeba-khaliq" target="_blank" rel="noopener">GitHub</a>
-      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-    <p class="footer-note">&copy; 2026 Areeba Khaliq</p>
-  </footer>
+  </div>
 
 </body>
 </html>
