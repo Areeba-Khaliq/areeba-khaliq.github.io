@@ -43,11 +43,12 @@ export const acneai = {
 
 export const research = {
   title: 'Federated Training and Explainability for Hybrid CNN-Transformer Skin Lesion Classification',
-  period: 'May 2026 – Aug 2026',
+  period: 'May 2026 – Oct 2026',
   text: [
-    'I compared four CNN-Transformer architectures on HAM10000 (10,015 images, seven diagnoses), training each one centrally and then federated across five simulated hospitals.',
-    'Federated training first cost 12.5 percentage points of accuracy. Group Normalization and starting from a centralized checkpoint brought that down to 4.2, and FedProx won back a further 6 points when the data was severely imbalanced.',
-    'To see what the models were looking at, I built a Grad-CAM++ and attention-rollout pipeline covering both network branches. It showed two reproducible failure modes on low-contrast lesions.',
+    'This research looks at whether skin cancer classifiers can still work well when hospitals are not allowed to share patient images. I used HAM10000, a public set of 10,015 skin lesion images across seven diagnoses, including melanoma.',
+    'I tested four model setups. Three were hybrids that run a CNN and a Vision Transformer side by side and combine what they see: EfficientNetV2-S with ViT-B/16, ConvNeXtV2-Tiny with ViT-B/16, and ConvNeXtV2-Tiny with EVA-02-Small. The fourth was MaxViT-Tiny, a single model that mixes convolution and attention inside itself, which I used to compare FedAvg with FedProx.',
+    'Each model was trained once on all the data in one place, and again with federated learning across five simulated hospitals that only share model weights. ConvNeXtV2-Tiny with EVA-02-Small did best, reaching 90.5% accuracy centrally and 88.5% federated. Switching to Group Normalization and starting federated training from a centrally trained model cut the accuracy lost to federation from about 12.5 points to 4.2.',
+    'To see what the models were looking at, I used Grad-CAM++ on the CNN side and attention rollout on the transformer side. Both pointed at the lesion when it was clear, but failed in two repeatable ways on low-contrast lesions.',
   ],
 };
 

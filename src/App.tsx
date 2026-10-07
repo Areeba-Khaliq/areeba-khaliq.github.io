@@ -1,8 +1,9 @@
 import { profile, education, acneai, recognition, research, projects, teaching, teachingNote, skills } from './data';
 import { Section, Entry, Prose, A } from './components/Section';
-import { FederatedChart, AcneStack } from './components/Figures';
+import { AcneStack } from './components/Figures';
 
 const nav = [
+  ['research', 'Research'],
   ['work', 'Work'],
   ['teaching', 'Teaching'],
   ['recognition', 'Recognition'],
@@ -49,17 +50,17 @@ function App() {
             {profile.bio.map(p => <p key={p}>{p}</p>)}
           </div>
 
+          <Section id="research" title="Research Experience">
+            <Entry title={research.title} date={research.period}>
+              <Prose items={research.text} />
+            </Entry>
+          </Section>
+
           <Section id="work" title="Work">
             <Entry title={<A href={acneai.href}>{acneai.title}</A>} meta="Final year project">
               <Prose items={acneai.text.slice(0, 2)} />
               <AcneStack />
               <Prose items={acneai.text.slice(2)} />
-            </Entry>
-
-            <Entry title={research.title} date={research.period}>
-              <Prose items={research.text.slice(0, 2)} />
-              <FederatedChart />
-              <Prose items={research.text.slice(2)} />
             </Entry>
 
             {projects.map(p => (
