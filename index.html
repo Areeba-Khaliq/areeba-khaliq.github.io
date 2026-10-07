@@ -1,88 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Areeba Khaliq</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <div class="page">
-
-    <header class="masthead">
-      <img src="profile.jpg" alt="Areeba Khaliq" class="portrait" onerror="this.style.display='none'">
-      <div class="masthead-text">
-        <h1>Areeba Khaliq</h1>
-        <p class="affiliation">Department of Computer Science<br>University of the Punjab, Lahore</p>
-        <p class="links">
-          <a href="mailto:areebakhaliq02@gmail.com">Email</a> &nbsp;/&nbsp;
-          <a href="https://github.com/areeba-khaliq" target="_blank" rel="noopener">GitHub</a> &nbsp;/&nbsp;
-          <a href="#" target="https://linkedin.com/in/areeba-khaliq" rel="noopener">LinkedIn</a> &nbsp;/&nbsp;
-          <a href="#" target="_blank" rel="noopener">CV</a>
-        </p>
-      </div>
-    </header>
-
-    <hr>
-
-
-    <hr>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="entry">
-        <h3>Federated Training and Per-Branch Explainability for Hybrid CNN-Transformer Skin Lesion Classification</h3>
-        <p class="entry-meta">Independent research project &middot; 2026</p>
-        <p>
-          Benchmarked four CNN-Transformer architectures for seven-class skin lesion diagnosis on HAM10000,
-          comparing centralized training against federated training across simulated hospitals. Reduced the
-          accuracy gap of federated training through normalization and initialization changes, and built a
-          Grad-CAM++ and attention-rollout pipeline to explain model behaviour across branches.
-        </p>
-      </div>
-
-      <div class="entry">
-        <h3>AcneAI: Acne Detection and Analysis</h3>
-        <p class="entry-meta">Final year project &middot; 2025&ndash;2026</p>
-        <p>
-          A three-model EfficientNet-B3 pipeline for detection, sub-type, and severity classification, served
-          through FastAPI with sub-second CPU inference. Includes an asynchronous processing layer built on
-          Celery and Redis, and an OCR/LLM pipeline for ingredient scanning and dermatology guidance.
-        </p>
-      </div>
-
-      <div class="entry">
-        <h3>Heart Disease Prediction</h3>
-        <p class="entry-meta">2025</p>
-        <p>
-          Comparative benchmark of four classical machine learning algorithms on the UCI Heart Disease dataset,
-          reaching 98.5% prediction accuracy.
-        </p>
-      </div>
-
-      <div class="entry">
-        <h3>ResuMate &amp; AgentForce</h3>
-        <p class="entry-meta">Hackathon projects &middot; 2025</p>
-        <p>
-          ResuMate is an AI-assisted resume builder built with Next.js and Grok AI. AgentForce is an IT support
-          assistant integrating Salesforce Agentforce with a FastAPI backend.
-        </p>
-      </div>
-
-    </section>
-
-    <hr>
-
-    <footer>
-      <p>areebakhaliq02@gmail.com</p>
-    </footer>
-
-  </div>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet" />
+    <title>Areeba Khaliq</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
